@@ -1,12 +1,11 @@
+
+# A very simple Flask Hello World app for you to get started with...
+
 from flask import Flask
 
 app = Flask(__name__)
 
-#Index page 
 @app.route('/')
-def index():
-    return '<h1>Student_Management_API</h1>'
+def hello_world():
+    return 'Hello from Flask!'
 
-@app.route('/students')
-def students():
-    return '<h1>List_of_students</h1>'
