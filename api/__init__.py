@@ -9,11 +9,13 @@ from .models.courses import Course
 from .models.students import Student
 from .models.users import User
 from flask_migrate import Migrate
+from flask_jwt_extended import JWTManager
 
 def create_app(config=config_dist['dev']):
     app=Flask(__name__)
 
     app.config.from_object(config)
+    app.config['JWT_SECRET_KEY'] = '8e6e4a0de566d0d4dcbba1e58737cff69c9a65134c83e15df5f41ef68f7d38b0'
     app.config['SECRET_KEY'] = '9ee134dd8bda762b7f8f8ada41ae1eb5d19ebea4e5257df6d2bd57b300797694'
 
     db.init_app(app)
@@ -25,6 +27,8 @@ def create_app(config=config_dist['dev']):
     api.add_namespace(auth_namespace,path='/auth')
     api.add_namespace(students_namespace,path='/students')
     api.add_namespace(courses_namespace,path='/courses')
+
+    jwt=JWTManager(app)
 
     @app.shell_context_processor
     def make_shell_context():
