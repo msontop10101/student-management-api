@@ -11,6 +11,9 @@ from .models.users import User
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
 
+
+#THIS IS WHERE ALL THE API WORKINGS AND RUNNINGS ARE
+
 def create_app(config=config_dist['dev']):
     app=Flask(__name__)
 
