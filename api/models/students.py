@@ -8,3 +8,15 @@ class Student(db.Model):
 
     def __repr__(self):
         return f'<Student {self.full_name}>'
+    
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_by_id(cls,id):
+        return cls.query.get_or_404(id)
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
