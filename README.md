@@ -13,38 +13,68 @@
 
 <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Function</th>
+    <th>Method</th>
+    <th>Route</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td>Signing up user</td>
+    <td>POST</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/auth/signup</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <td>User Login</td>
+    <td>POST</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/auth/login</td>
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
+    <td>Get All Students</td>
+    <td>GET</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/students/students</td>
   </tr>
   <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
+    <td>Adding a new student</td>
+    <td>POST</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/students/students</td>
   </tr>
   <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
+    <td>Getting a single student</td>
+    <td>GET</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/students/student/{student_id}</td>
   </tr>
   <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <td>Deleting a new student</td>
+    <td>DELETE</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/students/student/{student_id}</td>
+  </tr>
+  <tr>
+    <td>Updating a student data</td>
+    <td>PUT</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/students/student/{student_id}</td>
+  </tr>
+  <tr>
+    <td>Getting all courses</td>
+    <td>GET</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/courses/courses</td>
+  </tr>
+  <tr>
+    <td>Adding a course</td>
+    <td>POST</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/courses/courses</td>
+  </tr>
+  <tr>
+    <td>Getting a single course by ID</td>
+    <td>GET</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/courses/course/{course_id}</td>
+  </tr>
+  <tr>
+    <td>Deleting a single course</td>
+    <td>DELETE</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/courses/course/{course_id}</td>
+  </tr>
+  <tr>
+    <td>Updating a course</td>
+    <td>PUT</td>
+    <td>http://moyosoreelijah.pythonanywhere.com/courses/course/{course_id}</td>
   </tr>
 </table>
